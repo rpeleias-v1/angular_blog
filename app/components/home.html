@@ -1,0 +1,15 @@
+<div class="alert alert-info">
+    Aguarde...
+</div>
+<div *ngIf="!showLoading">
+    <div *ngIf="_loginService.isLogged()" class="alert alert-danger">
+        Olá {{_loginService.getUser().name}}
+        <a #href="" (click)="logout($event)" class="pull-right">Sair</a>
+    </div>
+    <div class="container" *ngFor="let p of users">
+        <h1>{{p.title}}</h1>
+        <p>{{p.text}}</p>
+        <p>Por: {{p.user?.name}}</p>
+        <a href="#" (click)="deletePost(p)" *ngIf="checkPost(p)">Apagar</a>
+    </div>
+</div>

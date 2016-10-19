@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <script src="libs/es6-shim.min.js"></script>
+    <script src="libs/zone.js"></script>
+    <script src="libs/Reflect.js"></script>
+    <script src="libs/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) { console.error(err); });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <my-app>Loading...</my-app>
+    </div>    
+</body>
+</html>
